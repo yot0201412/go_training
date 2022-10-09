@@ -1,0 +1,10 @@
+linter-setting:
+  govert:
+    check-shadowing: false
+  gocyclo:
+    min-complexity: 30
+  mispell:
+    local: US
+  
+linters:
+  disable-all: true

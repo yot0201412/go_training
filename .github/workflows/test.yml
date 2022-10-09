@@ -1,0 +1,21 @@
+name: test
+
+on :
+  push:
+    branches:
+     - "main"
+  pull-request:
+
+jobs:
+  golang-test:
+    name: golang-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: SetUp
+        uses: actions/setup-go@v3
+        with: 
+          go-version: ">= 1.18"
+      - name: run test
+        uses: actions/checkout@v3
+      - run: go test ./...
+
